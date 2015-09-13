@@ -2,6 +2,14 @@
 
 require('dotenv').load();
 
+console.log('Production deploy environment');
+console.log('access key = <hidden>');
+console.log('secret key = <hidden>');
+console.log('bucket     = ' + process.env.S3_BUCKET_NAME);
+console.log('prefix     = ' + process.env.S3_BUCKET_PREFIX);
+console.log('app name   = ' + process.env.INDEX_APP_NAME);
+console.log('endpoint   = ' + process.env.INDEX_ENDPOINT);
+
 module.exports = {
   "production": {
     "assets": {
