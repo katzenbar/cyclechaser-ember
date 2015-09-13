@@ -9,7 +9,7 @@ module.exports = {
       "secretAccessKey": process.env.AWS_SECRET_ACCESS_KEY,
       "bucket": process.env.S3_BUCKET_NAME,
       "prefix": process.env.S3_BUCKET_PREFIX,
-      "distPrefix": process.env.S3_BUCKET_DIST_PREFIX
+      "distPrefix": "dist-{{SHA}}"
     },
     "index": {
       "app": process.env.INDEX_APP_NAME,
