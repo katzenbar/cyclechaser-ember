@@ -1,9 +1,13 @@
-/* global require, module */
+/* global require, module, process */
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+
+require('dotenv').load();
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    'fingerprint': {
+      prepend: process.env.FINGERPRINT
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
